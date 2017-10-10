@@ -49,6 +49,7 @@ module.exports = {
 
       // Optional
       appMountId: 'myApp',
+      //appMountIds: ['about', 'contact'], //e.g. multiple templates
       meta: [
         {
           name: 'identifier-url',
