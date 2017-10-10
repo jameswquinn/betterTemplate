@@ -1,0 +1,27 @@
+<% var item, key %><% htmlWebpackPlugin.options.lang = htmlWebpackPlugin.options.lang || "en" %><% htmlWebpackPlugin.options.meta = htmlWebpackPlugin.options.meta || [] %>
+<!DOCTYPE html>
+<html lang="<%= htmlWebpackPlugin.options.lang %>" <% if (htmlWebpackPlugin.files.manifest) { %> manifest="<%= htmlWebpackPlugin.files.manifest %>"<% } %>>
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible"><% if (Array.isArray(htmlWebpackPlugin.options.meta)) { %><% for (item of htmlWebpackPlugin.options.meta) { %>
+    <meta<% for (key in item) { %> <%= key %>="<%= item[key] %>"<% } %>><% } %><% } %>
+    <% if (htmlWebpackPlugin.files.favicon) { %>
+    <link href="<%= htmlWebpackPlugin.files.favicon %>" rel="shortcut icon">
+    <% } %>
+    <% if (htmlWebpackPlugin.options.mobile) { %>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <% } %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+  </head>
+  <body>
+
+  </body>
+</html>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#ffffff">
