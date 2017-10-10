@@ -51,13 +51,45 @@ module.exports = {
       appMountId: 'myApp',
       meta: [
         {
+          name: 'identifier-url',
+          content: 'http://www.webestools.com/'
+        },
+        {
+          name: 'title',
+          content: 'Webestools'
+        },
+        {
           name: 'description',
           content: 'A better default template for html-webpack-plugin.'
         },
         {
+          name: 'abstract',
+          content: 'Tools for webmasters'
+        },
+        {
+          name: 'keywords',
+          content: 'tools, webmasters, meta, generator'
+        },
+        {
           name: 'author',
           content: 'A N Other'
-        }
+        },
+        {
+          name: 'revisit-after',
+          content: '15'
+        },
+        {
+          name: 'language',
+          content: 'EN'
+        },
+        {
+          name: 'copyright',
+          content: '© 2017 Webestool'
+        },
+        {
+          name: 'robots',
+          content: 'Index, follow'
+        },
       ],
       mobile: true,
       lang: 'en',
