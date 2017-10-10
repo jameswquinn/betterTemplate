@@ -2,9 +2,7 @@
 
 <% htmlWebpackPlugin.options.appMountIds = htmlWebpackPlugin.options.appMountIds || [] %>
 <% htmlWebpackPlugin.options.lang = htmlWebpackPlugin.options.lang || "en" %>
-<% htmlWebpackPlugin.options.links = htmlWebpackPlugin.options.links || [] %>
 <% htmlWebpackPlugin.options.meta = htmlWebpackPlugin.options.meta || [] %>
-<% htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || [] %>
 
 <!DOCTYPE html>
 <html lang="<%= htmlWebpackPlugin.options.lang %>" <% if (htmlWebpackPlugin.files.manifest) { %> manifest="<%= htmlWebpackPlugin.files.manifest %>"<% } %>>
@@ -18,6 +16,12 @@
 
     <% if (Array.isArray(htmlWebpackPlugin.options.meta)) { %>
       <% for (item of htmlWebpackPlugin.options.meta) { %>
+      <meta<% for (key in item) { %> <%= key %>="<%= item[key] %>"<% } %>>
+      <% } %>
+    <% } %>
+
+    <% if (Array.isArray(htmlWebpackPlugin.options.og)) { %>
+      <% for (item of htmlWebpackPlugin.options.og) { %>
       <meta<% for (key in item) { %> <%= key %>="<%= item[key] %>"<% } %>>
       <% } %>
     <% } %>

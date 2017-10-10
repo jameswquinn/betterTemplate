@@ -91,6 +91,24 @@ module.exports = {
           content: 'Index, follow'
         },
       ],
+      og: [
+        {
+          property: 'title:og',
+          content: 'Webestools'
+        },
+        {
+          property: 'og:site_name',
+          content: 'David Walsh Blog'
+        },
+        {
+          property: 'image:og',
+          content: 'https://davidwalsh.name/wp-content/themes/klass/img/facebooklogo.png'
+        },
+        {
+          property: 'description:og',
+          content: 'A better default template for html-webpack-plugin.'
+        },
+      ],
       mobile: true,
       lang: 'en',
       title: 'Project Demo',
